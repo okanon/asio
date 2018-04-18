@@ -12,7 +12,7 @@ cd asio/https/https
 cp https.cpp https.h ../test
 
 g++ -o https.o -c https.cpp
-g++ -o main.o -c main.cpp
+g++ -o main.o -c main.cpp -I.
 g++ -o client main.o https.o -lssl -lcrypto -lboost_system -lpthread
 
 ./client
