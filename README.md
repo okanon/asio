@@ -13,7 +13,7 @@ cp https.cpp https.h ../test
 
 g++ -o https.o -c https.cpp
 g++ -o main.o -c main.cpp
-g++ -o client main.o https.o -lboost_system -lssl
+g++ -o client main.o https.o -lssl -lcrypto -lboost_system -lpthread
 
 ./client
 ```
