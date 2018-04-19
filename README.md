@@ -3,7 +3,19 @@ Thread safety https client using boost::asio & openssl
 
 ## Build & How to Use
 ### Windows
-Build Solution and copy libeay32.lib, ssleay32.lib in __resource/dylib/(Platform)/__ directory to the directory with __client.exe__.
+Build Solution,
+
+__$(boost_1660)__ = boost include dir<br>
+__$(boost_1660_lib32)__ = boost x32 lib dir<br>
+__$(boost_1660_lib64)__ = boost x64 lib dir<br>
+
+```
+setx boost_1660 "BOOST INCLUDE DIR"
+setx boost_1660_lib32 "BOOST LIB32 DIR"
+setx boost_1660_lib64 "BOOST LIB64 DIR"
+```
+
+or change include dir and linker dir.
 
 ## Linux
 ```
