@@ -17,6 +17,7 @@ int main() {
 		boost::asio::ip::tcp::resolver::iterator iterator = resolver.resolve(query);
 
 		boost::asio::ssl::context ctx(boost::asio::ssl::context::sslv23);
+		ctx.load_verify_file("YOUR_ROOT_CA_CERTIFICATE");
 
 		std::make_shared<inc::client>(io_service, ctx, iterator)->get("www.google.co.jp", "/");
 

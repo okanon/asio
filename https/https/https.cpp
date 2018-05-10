@@ -1,4 +1,5 @@
 #include "https.h"
+#include "verify.h"
 
 namespace inc {
 	client::client(boost::asio::io_service& io_service,
@@ -25,6 +26,9 @@ namespace inc {
 	}
 
 	void client::handle_connect(const boost::system::error_code& error) {
+		socket_.set_verify_callback(make_verbose_verification(
+			boost::asio::ssl::rfc2818_verification(host_)));
+
 		if (!error)
 		{
 			socket_.async_handshake(boost::asio::ssl::stream_base::client,

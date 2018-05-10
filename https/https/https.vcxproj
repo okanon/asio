@@ -139,9 +139,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="https.cpp" />
+    <ClCompile Include="verify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="https.h" />
+    <ClInclude Include="verify.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

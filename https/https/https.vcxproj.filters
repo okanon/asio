@@ -2,9 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="https.cpp" />
+    <ClCompile Include="verify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="https.h" />
+    <ClInclude Include="verify.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
